@@ -1,0 +1,138 @@
+import os
+
+def menu():
+        print ("Selecciona una opción")
+        print ("\t1 - Cuenta Consonantes")
+        print ("\t2 - Cuenta Vocales")
+        print ("\t3 - Cuenta Signos de Puntuacion")
+        print ("\t4 - Cuenta Espacios")
+        print ("\t5 - Cuenta Palabras")
+        print ("\t6 - Cuenta Lineas")
+        print ("\t7 - Cuenta Mayusculas")
+        print ("\t8 - Cuenta Minusculas")
+        print ("\t9 - Muestra Hexadecimal")
+        print ("\t10 - Convierte a Mayusculas")
+        print ("\t11 - Convierte a Minusculas")
+        print ("\t0 - salir")
+
+def cuentaConsonantes(s):
+        contador=0
+        for i in range(len(s)):
+            if s[i].lower() in set ("bcdfghjklmnñpqrstvwxyz"):
+                contador +=1
+        return contador
+    
+def cuentaVocales(s):
+    contador=0
+    for i in range(len(s)):
+        if s[i].lower() in set ("aeiouàèìòù"):
+            contador +=1
+    return contador
+
+def cuentaSignos(s):
+    contador=0
+    for i in range(len(s)):
+        if s[i].lower() in set (".,:;¡!¿?(){}[]-_"):
+            contador +=1
+    return contador
+
+def cuentaEspacios(s):
+    contador=0
+    for i in range(len(s)):
+        if s[i].lower() in set (" "):
+            contador +=1
+    return contador
+
+def cuentaMayusculas(s):
+    contador=0
+    for i in range(len(s)):
+        if s[i] in set ("ABCDEFGHIJKLMNÑOPQRSTUVWXYZ"):
+            contador +=1
+    return contador
+
+def cuentaMinusculas(s):
+    contador=0
+    for i in range(len(s)):
+        if s[i] in set ("abcdefghijklmnñopqrstuvwxyz"):
+            contador +=1
+    return contador
+
+while True:
+            menu()
+            opcionMenu = input("inserta un numero valor >> ")
+
+            if opcionMenu=="1":
+
+                print ("")
+                cadena = input('dame una cadena ')
+                cuentaConsonantes(cadena)
+                print('La cadena tiene {} consonantes\n'.format(cuentaConsonantes(cadena)))
+
+            elif opcionMenu=="2":
+
+                print ("")
+                cadena = input('dame una cadena ')
+                cuentaVocales(cadena)
+                print('La cadena tiene {} vocales\n'.format(cuentaVocales(cadena)))
+
+            elif opcionMenu=="3":
+
+                print ("")
+                cadena = input('dame una cadena ')
+                cuentaSignos(cadena)
+                print('La cadena tiene {} Signos de Puntuacion\n'.format(cuentaSignos(cadena)))
+
+            elif opcionMenu=="4":
+
+                print ("")
+                cadena = input('dame una cadena ')
+                cuentaSignos(cadena)
+                print('La cadena tiene {} Espacios\n'.format(cuentaEspacios(cadena)))
+
+            elif opcionMenu=="5":
+
+                    print ("")
+                    input("Has pulsado la opción 5...\npulsa una tecla para continuar")
+
+            elif opcionMenu=="6":
+
+                    print ("")
+                    input("Has pulsado la opción 6...\npulsa una tecla para continuar")
+
+            elif opcionMenu=="7":
+
+                print ("")
+                cadena = input('dame una cadena ')
+                cuentaMayusculas(cadena)
+                print('La cadena tiene {} Mayusculas\n'.format(cuentaMayusculas(cadena)))
+
+            elif opcionMenu=="8":
+
+                print ("")
+                cadena = input('dame una cadena ')
+                cuentaMinusculas(cadena)
+                print('La cadena tiene {} Minusculas\n'.format(cuentaMinusculas(cadena)))
+
+            elif opcionMenu=="9":
+
+                    print ("")
+                    input("Has pulsado la opción 9...\npulsa una tecla para continuar")
+
+            elif opcionMenu=="10":
+
+                print ("")
+                cadena = input('dame una cadena ')
+                print (cadena.upper())
+
+            elif opcionMenu=="11":
+
+                print ("")
+                cadena = input('dame una cadena ')
+                print (cadena.lower())
+
+            elif opcionMenu=="0":
+                    break
+
+            else:
+                    print ("")
+                    input("No has pulsado ninguna opción correcta...\npulsa una tecla para continuar")
